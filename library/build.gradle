@@ -1,18 +1,18 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
 
 // This is the library version used when deploying the artifact
 version = "1.1.2"
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
     resourcePrefix "lwv"
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 23
+        minSdkVersion 14
+        targetSdkVersion 28
         versionCode 5
         versionName "1.1.2"
     }
@@ -29,7 +29,7 @@ android {
 def siteUrl = 'https://github.com/lantouzi/WheelView-Android'
 def gitUrl = 'https://github.com/lantouzi/WheelView-Android.git'
 group = "com.lantouzi.wheelview"
-
+/*
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
@@ -66,10 +66,11 @@ install {
         }
     }
 }
+*/
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:28.0.0'
 }
 
 task sourcesJar(type: Jar) {
@@ -90,7 +91,7 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
-
+/*
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
@@ -108,3 +109,4 @@ bintray {
         publish = true
     }
 }
+*/
